@@ -1,0 +1,12 @@
+Image 0:
+Total hits: 61
+Refined hits: 58
+Average Diameter (microns): 1.125
+
+
+Image 1:
+Total hits: 80
+Refined hits: 73
+Average Diameter (microns): 1.206
+
+

@@ -1,0 +1,89 @@
+Blob counter config:
+
+use_config = True
+Starting Image = 1
+Ending Image (leave 0 for all images) = 1
+Exclude Brightness Under = 25
+uM Scale = 20
+Pixel Scale = 124
+Run Two Searches (WIP) = False
+_____________________________________________________
+Primary Analysis:
+
+min_sigma (1.0) = 1.0
+max_sigma (50) = 10.0
+overlap (0.5) = 0.9999
+threshold (0.2) = 0.02
+num_sigma (10) = None
+log_scale (False) = False
+
+Secondary Analysis:
+
+min_sigma (1.0) = 1.0
+max_sigma (50) = 3.0
+overlap (0.5) = 0.9999
+threshold (0.2) = 0.02
+num_sigma (10) = None
+log_scale (False) = False
+_____________________________________________________
+
+
+
+Help -
+
+min_sigma : scalar or sequence of scalars, optional
+
+the minimum standard deviation for Gaussian kernel. 
+Keep this low to detect smaller blobs. The standard 
+deviations of the Gaussian filter are given for each 
+axis as a sequence, or as a single number, in which 
+case it is equal for all axes.
+_____________________________________________________
+
+max_sigma : scalar or sequence of scalars, optional
+
+The maximum standard deviation for Gaussian kernel. 
+Keep this high to detect larger blobs. The standard 
+deviations of the Gaussian filter are given for each 
+axis as a sequence, or as a single number, in which 
+case it is equal for all axes.
+_____________________________________________________
+
+num_sigma : int, optional
+
+The number of intermediate values of standard 
+deviations to consider between min_sigma and 
+max_sigma.
+_____________________________________________________
+
+threshold : float, optional.
+
+The absolute lower bound for scale space maxima. 
+Local maxima smaller than thresh are ignored. Reduce 
+this to detect blobs with less intensities.
+_____________________________________________________
+
+overlapfloat, optional
+
+A value between 0 and 1. If the area of two blobs 
+overlaps by a fraction greater than threshold, the 
+smaller blob is eliminated.
+_____________________________________________________
+
+log_scale : bool, optional
+If set intermediate values of standard deviations 
+are interpolated using a logarithmic scale to the 
+base 10. If not, linear interpolation is used.
+_____________________________________________________
+
+exclude_border : tuple of ints, int, or False, optional
+
+If tuple of ints, the length of the tuple must match 
+the input array’s dimensionality. Each element of the 
+tuple will exclude peaks from within exclude_border-
+pixels of the border of the image along that 
+dimension. If nonzero int, exclude_border excludes 
+peaks from within exclude_border-pixels of the border 
+of the image. If zero or False, peaks are identified 
+regardless of their distance from the border
+_____________________________________________________
